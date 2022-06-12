@@ -11,6 +11,9 @@
 		2F5D12BD2854EEDF00999CB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D12BC2854EEDF00999CB4 /* ContentView.swift */; };
 		2F5D12BF2854EEDF00999CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D12BE2854EEDF00999CB4 /* Assets.xcassets */; };
 		2F5D12C22854EEDF00999CB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F5D12C12854EEDF00999CB4 /* Preview Assets.xcassets */; };
+		2F5D12C928551B4F00999CB4 /* QRGenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D12C828551B4F00999CB4 /* QRGenerateView.swift */; };
+		2F5D12CB2855A87400999CB4 /* QRScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D12CA2855A87400999CB4 /* QRScanView.swift */; };
+		2F5D12CE2855AD4600999CB4 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 2F5D12CD2855AD4600999CB4 /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		2F5D12BC2854EEDF00999CB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2F5D12BE2854EEDF00999CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F5D12C12854EEDF00999CB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2F5D12C828551B4F00999CB4 /* QRGenerateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerateView.swift; sourceTree = "<group>"; };
+		2F5D12CA2855A87400999CB4 /* QRScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5D12CE2855AD4600999CB4 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,8 @@
 			children = (
 				2F5D12BA2854EEDF00999CB4 /* QRTestApp.swift */,
 				2F5D12BC2854EEDF00999CB4 /* ContentView.swift */,
+				2F5D12C828551B4F00999CB4 /* QRGenerateView.swift */,
+				2F5D12CA2855A87400999CB4 /* QRScanView.swift */,
 				2F5D12BE2854EEDF00999CB4 /* Assets.xcassets */,
 				2F5D12C02854EEDF00999CB4 /* Preview Content */,
 			);
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = QRTest;
+			packageProductDependencies = (
+				2F5D12CD2855AD4600999CB4 /* CodeScanner */,
+			);
 			productName = QRTest;
 			productReference = 2F5D12B72854EEDF00999CB4 /* QRTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 2F5D12AE2854EEDF00999CB4;
+			packageReferences = (
+				2F5D12CC2855AD4600999CB4 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 2F5D12B82854EEDF00999CB4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F5D12BD2854EEDF00999CB4 /* ContentView.swift in Sources */,
+				2F5D12C928551B4F00999CB4 /* QRGenerateView.swift in Sources */,
+				2F5D12CB2855A87400999CB4 /* QRScanView.swift in Sources */,
 				2F5D12BB2854EEDF00999CB4 /* QRTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,17 +280,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QRTest/Preview Content\"";
 				DEVELOPMENT_TEAM = 7U333QCZ4W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan QR Code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,6 +301,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.jinsan.QRTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,17 +313,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QRTest/Preview Content\"";
 				DEVELOPMENT_TEAM = 7U333QCZ4W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan QR Code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +334,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.jinsan.QRTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +363,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F5D12CC2855AD4600999CB4 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F5D12CD2855AD4600999CB4 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F5D12CC2855AD4600999CB4 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F5D12AF2854EEDF00999CB4 /* Project object */;
 }
